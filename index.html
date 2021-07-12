@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="maintitle">
+        <div class="firsttitle">
+            <span>S</span>
+            <span>P</span>
+            <span>L</span>
+            <span>I</span>
+        </div>
+        <div class="secondtitle">
+            <span>T</span>
+            <span>T</span>
+            <span>E</span>
+            <span>R</span>
+        </div>
+    </div>
+    <div class="mohitcontainer">
+        <div class="leftportion">
+            <div class="tasktitle1">Bill</div>
+            <div class="numcont">
+                <input type="number" placeholder="0">
+            </div>
+            <i class="fa fa-usd f1" aria-hidden="true"></i>
+            <h4>Select Tip %</h4>
+            <div class="buttons">
+                <input type="button" value="5%">
+                <input type="button" value="10%">
+                <input type="button" value="15%">
+                <input type="button" value="25%">
+                <input type="button" value="50%">
+                <input type="button" class="lastico" value="Custom">
+            </div>
+            <div class="flexit">
+                <div class="anotherline">Number of People</div>
+                <div id="logshower">Can't Be Zero</div>
+            </div>
+            <div class="numcont">
+                <input type="number" placeholder="0">
+            </div>
+            <i class="fa fa-user f2" aria-hidden="true"></i>
+        </div>
+
+        <div class="childone">
+            <div class="first">
+                <div class="one">
+                    <div class="title">Tip Amount</div>
+                    <div class="antitle">/person</div>
+                </div>
+                <div class="two">
+                    <div class="price">$0.00</div>
+                </div>
+            </div>
+
+            <div class="second">
+                <div class="one">
+                    <div class="title">Total</div>
+                    <div class="antitle">/person</div>
+                </div>
+                <div class="two">
+                    <div class="price">$0.00</div>
+                </div>
+            </div>
+            <button>RESET</button>
+        </div>
+    </div>
+</body>
+
+</html>

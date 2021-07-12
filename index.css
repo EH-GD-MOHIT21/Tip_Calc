@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: hsl(185, 41%, 84%);
+    font-family: 'Space Mono', monospace;
+}
+
+.mohitcontainer {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 700px;
+    border-radius: 20px;
+    background: white;
+    display: flex;
+    padding: 1rem;
+}
+
+.maintitle {
+    display: block;
+    margin: 80px auto;
+    text-align: center;
+    font-weight: 700;
+    color: hsl(183, 100%, 15%);
+}
+
+.leftportion {
+    margin: 10px;
+    flex: 1;
+}
+
+.leftportion input[type="number"] {
+    width: 83%;
+    height: 40px;
+    text-align: right;
+    padding-left: 30px;
+    padding-right: 20px;
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    background: hsl(189, 41%, 97%);
+    border: none;
+    outline: none;
+}
+
+.numcont {
+    margin-top: 5px;
+}
+
+.leftportion .f1 {
+    position: absolute;
+    left: 5.5%;
+    top: 20.5%;
+    transform: translate(-50%, -50%);
+}
+
+.leftportion .f2 {
+    position: absolute;
+    left: 5.5%;
+    top: 87%;
+    transform: translate(-50%, -50%);
+}
+
+.buttons {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+input[type="button"] {
+    font-family: 'Space Mono', monospace;
+    width: 90%;
+    height: 40px;
+    cursor: pointer;
+    color: white;
+    background: hsl(183, 100%, 15%);
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+input[type="button"]:hover {
+    background: hsl(172, 67%, 45%);
+}
+
+input[type="number"]:focus {
+    border: 3px solid hsl(172, 67%, 45%);
+    border-radius: 5px;
+    margin: -3px;
+}
+
+.childone {
+    flex: 1;
+    border-radius: 15px;
+    background: hsl(183, 100%, 15%);
+    margin: 10px;
+}
+
+.flexit {
+    margin-top: 55px;
+}
+
+.buttons .lastico {
+    background: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+}
+
+.childone .title {
+    color: white;
+}
+
+.childone .antitle {
+    color: hsl(184, 14%, 56%);
+}
+
+.first,
+.second {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.one {
+    padding-top: 50px;
+    padding-left: 40px;
+}
+
+.two {
+    padding-right: 20px;
+    padding-top: 40px;
+    font-size: 32px;
+}
+
+.price {
+    color: hsl(172, 67%, 45%);
+    font-weight: 700;
+}
+
+.childone button {
+    width: 80%;
+    height: 40px;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: hsl(172, 67%, 45%);
+}
+
+#logshower {
+    display: block;
+    padding-right: 10px;
+}
+
+.flexit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media(max-width:750px) {
+    .mohitcontainer {
+        position: relative;
+        flex-direction: column;
+        width: 100%;
+        transform: translate(0%, 0%);
+        left: 0%;
+    }
+    .maintitle {
+        margin: 30px auto;
+    }
+    .leftportion .f1 {
+        top: 11%;
+        left: 42px;
+    }
+    .leftportion .f2 {
+        top: 46%;
+        left: 42px;
+    }
+    .childone button {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width:314px) {
+    .leftportion .f1 {
+        top: 10.5%;
+        left: 42px;
+    }
+    .leftportion .f2 {
+        top: 47.5%;
+        left: 42px;
+    }
+}
+
+@media (max-width:276px) {
+    .leftportion .f2 {
+        top: 46%;
+        left: 42px;
+    }
+}
