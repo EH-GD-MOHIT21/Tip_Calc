@@ -35,24 +35,24 @@
         <div class="leftportion">
             <div class="tasktitle1">Bill</div>
             <div class="numcont">
-                <input type="number" placeholder="0">
+                <input id="billtotal" type="number" placeholder="0">
             </div>
             <i class="fa fa-usd f1" aria-hidden="true"></i>
             <h4>Select Tip %</h4>
             <div class="buttons">
-                <input type="button" value="5%">
-                <input type="button" value="10%">
-                <input type="button" value="15%">
-                <input type="button" value="25%">
-                <input type="button" value="50%">
-                <input type="button" class="lastico" value="Custom">
+                <input class="bbtnp" type="button" value="5%">
+                <input class="bbtnp" type="button" value="10%">
+                <input class="bbtnp" type="button" value="15%">
+                <input class="bbtnp" type="button" value="25%">
+                <input class="bbtnp" type="button" value="50%">
+                <input class="bbtnp" type="button" id="lastico" class="lastico" value="Custom">
             </div>
             <div class="flexit">
                 <div class="anotherline">Number of People</div>
                 <div id="logshower">Can't Be Zero</div>
             </div>
             <div class="numcont">
-                <input type="number" placeholder="0">
+                <input type="number" id="noperson" placeholder="0">
             </div>
             <i class="fa fa-user f2" aria-hidden="true"></i>
         </div>
@@ -64,7 +64,7 @@
                     <div class="antitle">/person</div>
                 </div>
                 <div class="two">
-                    <div class="price">$0.00</div>
+                    <div id="fprice" class="price">$0.00</div>
                 </div>
             </div>
 
@@ -74,12 +74,13 @@
                     <div class="antitle">/person</div>
                 </div>
                 <div class="two">
-                    <div class="price">$0.00</div>
+                    <div id="perperson" class="price">$0.00</div>
                 </div>
             </div>
-            <button>RESET</button>
+            <button type="button" id="reset">RESET</button>
         </div>
     </div>
 </body>
+<script src="script.js"></script>
 
 </html>
