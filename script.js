@@ -13,6 +13,8 @@ document.getElementById('lastico').addEventListener('mouseout', function() {
 
 document.getElementById('lastico').addEventListener("input", function() {
     // console.log(this.value);
+    document.getElementById('fprice').innerText = "$0.00"
+    document.getElementById('perperson').innerText = "$0.00";
     buttonstates = [false, false, false, false, false, false];
     index = btns.indexOf(this)
     buttonstates[index] = true;
@@ -76,10 +78,18 @@ function calctip() {
             break;
         }
     if (index === null) {
+        document.getElementById('logshower').textContent = "Select tip %";
+        document.getElementById('logshower').style.display = "block";
         return
     }
+    console.log('calal')
     if (index == 5) {
         percentage_tip = document.getElementById('lastico').value;
+        if (percentage_tip.indexOf('%') == -1) {
+            document.getElementById('logshower').textContent = "Use % tip";
+            document.getElementById('logshower').style.display = "block";
+            return
+        }
         percentage_tip = parseFloat(percentage_tip.slice(0, -1))
         percentage_tip.toFixed(2)
     } else {
@@ -88,14 +98,24 @@ function calctip() {
     billtotal = document.getElementById('billtotal').value;
     number_of_person = document.getElementById('noperson').value;
     if (number_of_person.indexOf('.') != -1) {
+        console.log("yes")
+        document.getElementById('fprice').innerText = "$0.00"
+        document.getElementById('perperson').innerText = "$0.00";
+        document.getElementById('logshower').style.display = "block";
+        document.getElementById('logshower').textContent = "Invalid no.";
         return
     }
-    if (number_of_person == '' || billtotal == '')
+    if (number_of_person == '' || billtotal == '') {
+        document.getElementById('logshower').style.display = "block";
+        document.getElementById('logshower').textContent = "Can't Be Zero";
+        document.getElementById('fprice').innerText = "$0.00"
+        document.getElementById('perperson').innerText = "$0.00";
         return
+    }
     if (parseInt(number_of_person) > 0 && parseFloat(billtotal) > 0) {
         tip_price = findtip(billtotal, percentage_tip);
-
         updatetiponhtml(billtotal, tip_price, number_of_person);
+        document.getElementById('logshower').style.display = "none";
     }
 }
 
@@ -111,9 +131,8 @@ function updatetiponhtml(real, tip, person) {
 }
 
 document.getElementById('noperson').addEventListener('input', function() {
-    if (this.value != '') {
+    if (this.value != '' && parseInt(this.value) != 0) {
         this.style.border = "3px solid hsl(172, 67%, 45%)";
-        document.getElementById('logshower').style.display = "none";
     } else {
         this.style.border = "3px solid crimson";
         document.getElementById('logshower').style.display = "block";
